@@ -12,11 +12,11 @@ const SalesTable: React.FC<SalesTableProps> = ({ data }) => {
         <Table>
             <thead>
                 <tr>
-                    <Th>Week Ending <FontAwesomeIcon icon={faSortDown} /></Th>
-                    <Th>Retail Sales <FontAwesomeIcon icon={faSortDown} /></Th>
-                    <Th>Wholesale Sales <FontAwesomeIcon icon={faSortDown} /></Th>
-                    <Th>Units Sold <FontAwesomeIcon icon={faSortDown} /></Th>
-                    <Th>Retailer Margin <FontAwesomeIcon icon={faSortDown} /></Th>
+                    <Th>Week Ending <FontAwesomeIcon icon={faSortDown} style={{ color: '#ccc', opacity: '0.6' }} /></Th>
+                    <Th>Retail Sales <FontAwesomeIcon icon={faSortDown} style={{ color: '#ccc', opacity: '0.6' }} /></Th>
+                    <Th>Wholesale Sales <FontAwesomeIcon icon={faSortDown} style={{ color: '#ccc', opacity: '0.6' }} /></Th>
+                    <Th>Units Sold <FontAwesomeIcon icon={faSortDown} style={{ color: '#ccc', opacity: '0.6' }} /></Th>
+                    <Th>Retailer Margin <FontAwesomeIcon icon={faSortDown} style={{ color: '#ccc', opacity: '0.6' }} /></Th>
                 </tr>
             </thead>
             <tbody>
