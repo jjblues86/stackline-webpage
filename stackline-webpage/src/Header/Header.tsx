@@ -1,6 +1,6 @@
 import React from 'react'
 import { HeaderContainer, Logo } from './HeaderStyles'
-import logo from '../assets/stackline_logo.svg'
+import logo from '../Assets/stackline_logo.svg'
 
 const Header: React.FC = () => {
   return (

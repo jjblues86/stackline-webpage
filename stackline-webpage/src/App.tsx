@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import './App.css';
 import { useDispatch } from 'react-redux';
-import jsonData from '../src/assets/stackline_frontend_assessment_data_2021.json';
+import jsonData from '../src/Assets/stackline_frontend_assessment_data_2021.json';
 import Header from './Header/Header';
 import { fetchProductsSuccess } from './store/dataSlice';
 import { Product } from './types/productTypes';
