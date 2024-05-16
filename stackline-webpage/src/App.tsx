@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import './App.css';
 import { useDispatch } from 'react-redux';
 import jsonData from '../src/assets/stackline_frontend_assessment_data_2021.json';
@@ -10,13 +10,13 @@ import SalesGraph from './Sales/SalesGraph';
 import SalesTable from './Sales/SalesTable';
 import { MainContainer, Content } from './ProductDetails/ProductStyles';
 
-// Business logic for data preparation
-
 const App = () => {
   const dispatch = useDispatch();
   const firstProduct = jsonData[0] as Product;
+  // Preprocess data for easier handling in child components
   const salesData = jsonData.map(product => product.sales).flat();
 
+  // Load product data into Redux store
   useEffect(() => {
     dispatch(fetchProductsSuccess(jsonData)); 
   }, [dispatch]);

@@ -9,7 +9,7 @@ export const Sidebar = styled.div`
   display: flex;
   flex-direction: column;  
   justify-content: start;  
-  border-right: 1px solid #e0e0e0;
+  border-right: 1px solid #fff;
   margin-right: 20px;
 `;
 
@@ -25,27 +25,22 @@ export const ProductName = styled.h1`
 `;
 
 export const ProductSubtitle = styled.h2`
-  font-size: 12px;
+  font-size: 13px;
   margin-bottom: 20px;
-  width: 200px; 
-  color: #757575;
+  color: #aeb9c8;
   text-align: center;    
 `;
-
 
 export const Tag = styled.span`
   background-color: white;   
   border: 1px solid #ccc;    
   color: #333;               
   font-size: 12px;           
-  padding: 5px 15px;         
-  margin: 5px;               
+  padding: 5px 16px;         
+  margin: 2px;               
   border-radius: 4px;       
   display: inline-flex;      
-  align-items: center;      
-  justify-content: center;  
-  flex-wrap: wrap;          
-  max-width: 100%;        
+  align-items: center;             
   box-sizing: border-box;    
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); 
 `;

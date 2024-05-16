@@ -1,3 +1,5 @@
+import { faSortDown } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { SalesData } from "../types/chartDataTypes";
 import { Table, Th, Td } from "./SalesTableStyles";
 
@@ -10,11 +12,11 @@ const SalesTable: React.FC<SalesTableProps> = ({ data }) => {
         <Table>
             <thead>
                 <tr>
-                    <Th>Week Ending</Th>
-                    <Th>Retail Sales</Th>
-                    <Th>Wholesale Sales</Th>
-                    <Th>Units Sold</Th>
-                    <Th>Retailer Margin</Th>
+                    <Th>Week Ending <FontAwesomeIcon icon={faSortDown} /></Th>
+                    <Th>Retail Sales <FontAwesomeIcon icon={faSortDown} /></Th>
+                    <Th>Wholesale Sales <FontAwesomeIcon icon={faSortDown} /></Th>
+                    <Th>Units Sold <FontAwesomeIcon icon={faSortDown} /></Th>
+                    <Th>Retailer Margin <FontAwesomeIcon icon={faSortDown} /></Th>
                 </tr>
             </thead>
             <tbody>

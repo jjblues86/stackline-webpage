@@ -4,9 +4,11 @@ import styled from 'styled-components';
 export const HeaderContainer = styled.header`
   display: flex;
   align-items: center;
-  background-color: black; 
+  background-color: #052849; 
   padding: 10px 20px;
-//   box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
 `;
 
 export const Logo = styled.img`
