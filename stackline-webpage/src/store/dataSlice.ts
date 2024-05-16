@@ -34,11 +34,19 @@ export default dataSlice.reducer;
 // Asynchronous thunk action
 export const fetchProducts = (): AppThunk => async dispatch => {
     try {
-        dispatch(fetchProductsStart());
-        const response = await fetch('/path/to/your/products.json');
+        const response = await fetch('stackline-webpage/src/stackline_frontend_assessment_data_2021.json');
+        if (!response.ok) {
+            throw new Error('Failed to fetch products: ' + response.status);
+        }
         const products = await response.json();
         dispatch(fetchProductsSuccess(products));
-    } catch (error) {
-        dispatch(fetchProductsFailure(error.toString()));
+    } catch (error: unknown) {
+        if (error instanceof Error) {
+            console.error('Failed to fetch products:', error.message);
+            dispatch(fetchProductsFailure(error.message));  
+        } else {
+            console.error('An unexpected error occurred');
+            dispatch(fetchProductsFailure('An unexpected error occurred'));
+        }
     }
 };
