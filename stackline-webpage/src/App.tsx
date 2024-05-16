@@ -6,6 +6,8 @@ import Header from './Header/Header';
 import { fetchProductsSuccess } from './store/dataSlice';
 import { Product } from './types/productTypes';
 import ProductDetails from './ProductDetails/ProductDetails';
+import SalesGraph from './Sales/SalesGraph';
+import SalesTable from './Sales/SalesTable';
 
 const App: React.FC = () => {
   const dispatch = useDispatch();
@@ -18,12 +20,15 @@ const App: React.FC = () => {
   }, [dispatch])
 
   const firstProduct = jsonData[0] as Product;
+  const salesData = jsonData.map((product: Product) => product.sales).flat();
 
   return (
     <div className='App'>
       <Header />
 
       <ProductDetails product={firstProduct} />
+      <SalesGraph data={[]} />
+      <SalesTable data={salesData} />
     </div>
   )
 }
