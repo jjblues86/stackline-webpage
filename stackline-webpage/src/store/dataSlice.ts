@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { AppThunk } from './store'; // Ensure you have a type for AppThunk if using TypeScript
+import { AppThunk } from './store'; 
 import { DataState, Product } from '../types/productTypes';
 
 const initialState: DataState = {
