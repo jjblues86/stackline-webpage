@@ -9,12 +9,17 @@ import ProductDetails from './ProductDetails/ProductDetails';
 import SalesGraph from './Sales/SalesGraph';
 import SalesTable from './Sales/SalesTable';
 import { MainContainer, Content } from './ProductDetails/ProductStyles';
+import moment from 'moment';
 
 const App = () => {
   const dispatch = useDispatch();
   const firstProduct = jsonData[0] as Product;
   // Preprocess data for easier handling in child components
   const salesData = jsonData.map(product => product.sales).flat();
+  const graphData = salesData.map(sale => ({
+    ...sale,
+    month: moment(sale.weekEnding, 'YYYY-MM-DD').format('MMM').toUpperCase() // 'JAN', 'FEB', 'MAR', etc.
+  }));
 
   // Load product data into Redux store
   useEffect(() => {
@@ -27,7 +32,7 @@ const App = () => {
       <MainContainer>
         <ProductDetails product={firstProduct} />
         <Content>
-          <SalesGraph data={firstProduct.sales} />
+          <SalesGraph data={graphData} />
           <SalesTable data={salesData} />
         </Content>
       </MainContainer>
