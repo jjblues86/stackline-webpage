@@ -5,17 +5,17 @@ export const Table = styled.table`
     border-collapse: collapse;
     background-color: white;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin-top: 60px;
+    margin-top: 50px;
 `;
 
 export const Th = styled.th`
-    background-color: #f4f4f4;
+    border-bottom: 1px solid #eee;
     color: #333;
-    padding: 8px 10px;
+    padding: 23px 10px;
     text-align: left;
 `;
 
 export const Td = styled.td`
-    padding: 8px 10px;
+    padding: 15px 10px;
     border-bottom: 1px solid #eee;
 `;

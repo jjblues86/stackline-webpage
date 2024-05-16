@@ -25,20 +25,29 @@ export const ProductName = styled.h1`
 `;
 
 export const ProductSubtitle = styled.h2`
-  font-size: 16px;
-  color: ${props => props.color || '#777'};
+  font-size: 12px;
   margin-bottom: 20px;
-  font-style: italic;
-  text-align: center;
+  width: 200px; 
+  color: #757575;
+  text-align: center;    
 `;
 
+
 export const Tag = styled.span`
-  display: inline-block;
-  background-color: #eee;
-  padding: 5px 10px;
-  margin-right: 5px;
-  border-radius: 1px;
-  font-size: 12px;
+  background-color: white;   
+  border: 1px solid #ccc;    
+  color: #333;               
+  font-size: 12px;           
+  padding: 5px 15px;         
+  margin: 5px;               
+  border-radius: 4px;       
+  display: inline-flex;      
+  align-items: center;      
+  justify-content: center;  
+  flex-wrap: wrap;          
+  max-width: 100%;        
+  box-sizing: border-box;    
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); 
 `;
 
 export const MainContainer = styled.div`
