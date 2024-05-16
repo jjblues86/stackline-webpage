@@ -5,7 +5,7 @@ export const Table = styled.table`
     border-collapse: collapse;
     background-color: white;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
+    margin-top: 60px;
 `;
 
 export const Th = styled.th`
